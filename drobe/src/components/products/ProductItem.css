@@ -1,0 +1,33 @@
+.card {
+  width: 100%;
+  font-size: 10px;
+  position: relative;
+}
+
+img {
+  width: auto;
+}
+.content {
+  background-color: coral;
+  color: white;
+  position: absolute;
+  top: 2px;
+  width: 100%;
+  padding: 0px;
+}
+
+@media all and (min-width: 600px) and (max-width: 1000px) {
+  .card {
+    width: calc(100% / 3 - 2%);
+  }
+}
+@media all and (min-width: 400px) and (max-width: 599px) {
+  .card {
+    width: calc(100% / 2 - 2%);
+  }
+}
+@media all and (max-width: 399px) {
+  .card {
+    width: calc(100% - 2%);
+  }
+}

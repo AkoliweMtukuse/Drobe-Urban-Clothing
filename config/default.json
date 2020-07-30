@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://akoliwe:akoliwe@drobe.cvryf.mongodb.net/Drobe?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
+}
