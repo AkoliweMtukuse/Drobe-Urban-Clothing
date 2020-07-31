@@ -36,10 +36,15 @@ const ProductItem = ({ product }) => {
           <span>{saving}</span>
         </Card.Text>
         <Card.Text></Card.Text>
-        <FontAwesomeIcon icon="shopping-bag" />
-        <span>
-          <FontAwesomeIcon icon="shopping-cart" />
-        </span>
+        <Button>
+          <FontAwesomeIcon icon="shopping-bag" />
+        </Button>
+        <Button>
+          {" "}
+          <span>
+            <FontAwesomeIcon icon="shopping-cart" />
+          </span>
+        </Button>
       </Card.Body>
     </Card>
   );

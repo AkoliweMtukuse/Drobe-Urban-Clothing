@@ -2,13 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-import logo from "./drobe-logo.png";
 import "./Navbar.css";
 
 export const Navbar = ({ title }) => {
   return (
-    <div className="navbar bg-primary">
-      <h1>{title}</h1>
+    <div className="navbar ">
+      <h1 id="title">{title}</h1>
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -34,6 +33,6 @@ Navbar.propTypes = {
   title: PropTypes.string.isRequired,
 };
 Navbar.defaultProps = {
-  title: "Drobe Urban Clothing",
+  title: "InStore",
 };
 export default Navbar;

@@ -1,0 +1,45 @@
+#textRow2 {
+  text-align: center;
+  justify-content: center;
+  margin: 30px !important;
+  border-style: solid;
+  border-color: black 2px;
+}
+#Statement {
+  background-color: #efefef;
+  text-align: center;
+  margin: 20px;
+}
+#Statement2 {
+  text-align: center;
+  margin: 20px;
+}
+#StatementText {
+  margin: 10px;
+  font-family: "Viga", sans-serif;
+}
+#StatementText2 {
+  margin: 10px;
+  font-family: "Bungee", cursive;
+  font-size: 65px;
+}
+#Button {
+  font-family: "Sawarabi Gothic", sans-serif;
+  width: auto;
+  height: auto;
+  background-color: #0c0c0c;
+}
+#headings {
+  margin-left: 55px;
+}
+#CardCol {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#CardImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}

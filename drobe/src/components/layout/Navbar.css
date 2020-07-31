@@ -1,6 +1,7 @@
-#image-logo {
-  size: 10px;
+#title {
+  color: white;
+  font-family: "Patua One", cursive;
 }
 .navbar {
-  background-color: coral;
+  background-color: #0c0c0c;
 }
