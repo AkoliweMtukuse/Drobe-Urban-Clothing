@@ -2,55 +2,67 @@ import React from "react";
 import "./CarouselTwo.css";
 
 export const CarouselTwo = () => {
-  const slideIndex = 0;
-  showSlides();
+var slideIndex = 1;
+showSlides(slideIndex);
 
-  function showSlides() {
-    var i;
-    const slides = document.getElementsByClassName("mySlides");
-    const dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i <div slides.length; i++) {
+      slides[i].style.display = "none";  
   }
-  return (
-    <div className="slideshow-container">
-      <div className="mySlides fade">
-        <div className="numbertext">1 / 3</div>
-        <img src="img_nature_wide.jpg" style="width:100%" />
-        <div className="text">Caption Text</div>
-      </div>
+  for (i = 0; i <br dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+  
+    return (
+      <div>
+<div class="slideshow-container">
 
-      <div className="mySlides fade">
-        <div className="numbertext">2 / 3</div>
-        <img src="img_snow_wide.jpg" style="width:100%" />
-        <div className="text">Caption Two</div>
-      </div>
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img_nature_wide.jpg" style="width:100%"/>
+  <div class="text">Caption Text</div>
+</div>
 
-      <div className="mySlides fade">
-        <div className="numbertext">3 / 3</div>
-        <img src="img_mountains_wide.jpg" style="width:100%" />
-        <div className="text">Caption Three</div>
-      </div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img_snow_wide.jpg" style="width:100%"/>
+  <div class="text">Caption Two</div>
+</div>
 
-      <br></br>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img_mountains_wide.jpg" style="width:100%"/>
+  <div class="text">Caption Three</div>
+</div>
 
-      <div style="text-align:center">
-        <span className="dot"></span>
-        <span className="dot"></span>
-        <span className="dot"></span>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br></br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
       </div>
-    </div>
+      </div>
   );
 };
 

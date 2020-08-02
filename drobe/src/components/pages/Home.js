@@ -1,7 +1,8 @@
 import React from "react";
 import { ControlledCarousel } from "./homeComponents/Carousel";
 import Cards from "./homeComponents/Cards";
-import { Row, Col, Card, Button, Container } from "react-bootstrap";
+import Footer from "../../components/layout/Footer";
+import { Row, Col, Card, Button, Container, Jumbotron } from "react-bootstrap";
 import "./Home.css";
 
 const Home = () => {
@@ -30,35 +31,54 @@ const Home = () => {
           <h1 id="StatementText2">
             Get an discount of 20%, 30%, 40% <br></br>on our Top Brands
           </h1>
-          <Button
-            id="Button"
-            style={{ width: "auto", height: "auto", fontSize: "20px" }}
-          >
-            Shop
-          </Button>
+          <Button id="Button">Shop</Button>
         </Col>{" "}
       </Row>
-      <h1 id="headings">Adidas Tees</h1>
+      <h1 id="headings">Adidas Sweater</h1>
       <Row className="cardsRow">
-        <Col xs lg="0.5" style={{ backgroundColor: "white" }}></Col>
+        <Col
+          xs
+          lg="0.5"
+          style={{ backgroundColor: "white" }}
+          id="cardCol"
+        ></Col>
 
-        <Col md="11" style={{ backgroundColor: "#efefef" }} id="cardsRow">
+        <Col md="11" style={{}} id="cardCol">
           <Cards />
         </Col>
 
-        <Col xs lg="0.5" style={{ backgroundColor: "white" }}></Col>
-      </Row>
-      <Row className="carouselTwoRow">
-        <Col xs lg="0.5" style={{ backgroundColor: "white" }}></Col>
-
         <Col
-          md="11"
-          style={{ backgroundColor: "#efefef" }}
-          id="carouselTwoRow"
+          xs
+          lg="0.5"
+          style={{ backgroundColor: "white" }}
+          id="cardCol"
+        ></Col>
+      </Row>
+      <Row className="cardsRow">
+        <Col
+          xs
+          lg="0.5"
+          style={{ backgroundColor: "white" }}
+          id="cardCol"
         ></Col>
 
-        <Col xs lg="0.5" style={{ backgroundColor: "white" }}></Col>
+        <Col xs="11" style={{}} id="cardCol">
+          <Jumbotron fluid id="Jumbotron">
+            <Container>
+              <h1>Adidas Sneaker "Ozweego"</h1>
+              <p>Impossible is just a word, Impossible is nothing</p>
+            </Container>
+          </Jumbotron>
+        </Col>
+
+        <Col
+          xs
+          lg="0.5"
+          style={{ backgroundColor: "white" }}
+          id="cardCol"
+        ></Col>
       </Row>
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,145 @@
+#card-container {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  margin-right: 1px;
+  float: right !important;
+  height: 100vh !important;
+  margin-left: 2%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  border-radius: 2px;
+  height: 100% !important;
+  display: flex !important;
+  flex-flow: wrap !important;
+  justify-content: space-around !important;
+  align-items: stretch !important;
+  align-content: space-around !important;
+}
+.wrapper {
+  height: 570px;
+  width: 380px;
+  text-align: center;
+  background-color: #0c0c0c;
+  margin: 3% auto;
+  margin-bottom: 3%;
+  border-radius: 7px 7px 7px 7px;
+  /* VIA CSS MATIC https://goo.gl/cIbnS */
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+  float: left;
+  height: 420px;
+  width: 380px;
+  border: 3px solid black;
+  /* border-bottom: hidden; */
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+img {
+  height: 100% !important;
+  width: 100% !important;
+}
+.product-img img {
+  border-radius: 7px 7px 0 0;
+}
+#button {
+  top: 0px;
+}
+
+/* .product-text {
+  height: 300px;
+  width: 327px;
+} */
+
+.product-text h1 {
+  margin: 0 0 0 38px;
+  padding-top: 52px;
+  font-size: 34px;
+  color: #474747;
+}
+
+.product-text h1,
+.product-price-btn p {
+  font-family: b;
+}
+
+.product-text h2 {
+  margin: 0 0 47px 38px;
+  font-size: 13px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d2d2d2;
+  letter-spacing: 0.2em;
+}
+
+.product-text p {
+  height: 125px;
+  margin: 0 0 0 38px;
+  font-family: "Playfair Display", serif;
+  color: #8d8d8d;
+  line-height: 1.7em;
+  font-size: 15px;
+  font-weight: lighter;
+  overflow: hidden;
+}
+
+.product-price-btn {
+  height: 103px;
+  width: 327px;
+  margin-top: 17px;
+  position: relative;
+}
+
+.product-price-btn p {
+  /* display: inline-block; */
+  position: relative;
+  justify-self: center;
+  margin-left: 1.5%;
+  margin-top: 5%;
+  height: 50px;
+
+  font-size: 12px;
+  font-weight: lighter;
+  color: #474747;
+}
+
+span {
+  display: inline-block;
+  height: 50px;
+  margin-left: 35px;
+  font-size: 21px;
+}
+
+.product-price-btn button {
+  float: center;
+  float: bottom !important;
+  display: inline-block;
+  margin-left: 47px !important;
+  border: 3px solid white;
+  margin-top: 27%;
+  height: 50px;
+  width: 130px;
+  margin-bottom: 0px;
+  /* margin: 0 40px 0 16px; */
+  box-sizing: border-box;
+  border-radius: 60px;
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  background-color: #0c0c0c;
+  cursor: pointer;
+  outline: none;
+}
+
+.product-price-btn button:hover {
+  background-color: grey;
+}

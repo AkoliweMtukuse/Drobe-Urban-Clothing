@@ -27,26 +27,28 @@ const ProductItem = ({ product }) => {
   }
 
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={img} />
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>
-          {price}
-          <span>{saving}</span>
-        </Card.Text>
-        <Card.Text></Card.Text>
-        <Button>
-          <FontAwesomeIcon icon="shopping-bag" />
-        </Button>
-        <Button>
-          {" "}
-          <span>
+    <div id="shopCards">
+      <Card style={{ width: "18rem" }} id="shopCards">
+        <Card.Img variant="top" src={img} id="shopCards" />
+        <Card.Body>
+          <Card.Title>{name}</Card.Title>
+          <Card.Text>
+            {price}
+            <span>{saving}</span>
+          </Card.Text>
+          <Card.Text></Card.Text>
+          <Button id="shopButton">
+            {" "}
+            <FontAwesomeIcon icon="shopping-bag" />
+          </Button>
+
+          <Button>
+            {" "}
             <FontAwesomeIcon icon="shopping-cart" />
-          </span>
-        </Button>
-      </Card.Body>
-    </Card>
+          </Button>
+        </Card.Body>
+      </Card>
+    </div>
   );
 };
 

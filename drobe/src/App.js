@@ -5,6 +5,7 @@ import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import Shop from "./components/pages/Shop";
 import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer.js";
 import Register from "./components/auth/Register";
 import Login from "./components/pages/Login";
 import ProductState from "./context/products/ProductState";

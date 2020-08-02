@@ -25,21 +25,48 @@
 }
 #Button {
   font-family: "Sawarabi Gothic", sans-serif;
-  width: auto;
-  height: auto;
   background-color: #0c0c0c;
+
+  float: center;
+  display: inline-block;
+  margin-top: 2%;
+  height: 70px;
+  width: 170px;
+  margin-bottom: 0px;
+  /* margin: 0 40px 0 16px; */
+  box-sizing: border-box;
+  border: transparent;
+  border-radius: 60px;
+  font-size: 27px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+
+  cursor: pointer;
+  outline: none;
+}
+#Jumbotron {
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/51f53e95779967.5e9f939a5916b.gif");
+  height: 500px;
+  margin-top: 70px;
+  margin-bottom: 100px !important;
+  font-family: "Mansalva", cursive;
+  font-size: 120px;
+  color: khaki;
+  border: 3px black;
+  background-color: #efefef;
+}
+#Jumbotron p {
+  font-family: "Alegreya", serif;
+  font-size: 40px;
+  font-weight: 5px;
 }
 #headings {
   margin-left: 55px;
 }
-#CardCol {
+#cardsRow {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
-  position: relative;
-}
-
-#CardImage {
-  width: 100%;
-  height: auto;
-  display: block;
 }

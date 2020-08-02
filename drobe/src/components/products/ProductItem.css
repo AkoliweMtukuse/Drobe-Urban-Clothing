@@ -3,7 +3,9 @@
   font-size: 10px;
   position: relative;
 }
-
+#shopButton {
+  width: 50px;
+}
 img {
   width: auto;
 }
@@ -30,4 +32,23 @@ img {
   .card {
     width: calc(100% - 2%);
   }
+}
+
+#shopCards {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  margin-right: 1px;
+  float: right !important;
+  height: 100vh !important;
+  margin-left: 100%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  border-radius: 2px;
+  height: 100% !important;
+  display: flex !important;
+  flex-flow: wrap !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  align-content: space-around !important;
 }
