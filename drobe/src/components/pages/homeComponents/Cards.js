@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Card, Button, Container } from "react-bootstrap";
 import "./Cards.css";
+import { Link } from "react-router-dom";
 
 const Cards = () => {
   return (
@@ -22,7 +23,11 @@ const Cards = () => {
                 Maroon for Men
               </span>
             </p>
-            <button type="button">Shop</button>
+            <button type="button">
+              <Link to="./login" id="Link">
+                Shop
+              </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -43,7 +48,11 @@ const Cards = () => {
                 <br></br>Yellow for Men
               </span>
             </p>
-            <button type="button">Shop</button>
+            <button type="button">
+              <Link to="./login" id="Link">
+                Shop
+              </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -64,7 +73,11 @@ const Cards = () => {
                 Red for Men
               </span>
             </p>
-            <button type="button">Shop</button>
+            <button type="button">
+              <Link to="./login" id="Link">
+                Shop
+              </Link>
+            </button>
           </div>
         </div>
       </div>

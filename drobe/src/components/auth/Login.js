@@ -24,38 +24,42 @@ const Login = () => {
       .catch((err) => {
         console.log(err);
       });
-  }
 
-  return (
-    <div className="form-container">
-      <h1>
-        <span className="text-pimary">Login</span>
-      </h1>
-      <form>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input type="email" name="email" value={email} onChange={onChange} />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
+    return (
+      <div className="form-container">
+        <h1>
+          <span className="text-pimary">Login</span>
+        </h1>
+        <form>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              value={email}
+              onChange={onChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              value={password}
+              onChange={onChange}
+            />
+          </div>
           <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={onChange}
+            type="submit"
+            value="Login"
+            className="btn btn-primary btn block"
+            onClick={() => LoginUser(user)}
           />
-        </div>
-        <input
-          type="submit"
-          value="Login"
-          className="btn btn-primary btn block"
-          onClick={() => LoginUser(user)}
-        />
-        <br></br>
-        <Link to="./Register">Register an Account</Link>
-      </form>
-    </div>
-  );
+          <br></br>
+          <Link to="./Register">Register an Account</Link>
+        </form>
+      </div>
+    );
+  }
 };
-
 export default Login;

@@ -16,6 +16,9 @@
   align-items: stretch !important;
   align-content: space-around !important;
 }
+#Link {
+  color: white !important;
+}
 .wrapper {
   height: 570px;
   width: 380px;

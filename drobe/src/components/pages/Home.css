@@ -1,3 +1,13 @@
+#title {
+  color: white;
+  font-family: "Patua One", cursive;
+}
+.navbar {
+  background-color: #0c0c0c;
+}
+#Link {
+  color: white !important;
+}
 #textRow2 {
   text-align: center;
   justify-content: center;

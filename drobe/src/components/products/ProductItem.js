@@ -1,53 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SetAuthToken from "../utils/setAuthToken";
 import axios from "axios";
-import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import CheckOut from "./Checkout";
+import { Card, Button, Alert } from "react-bootstrap";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-const ProductItem = ({ product }) => {
-  const { id, name, img, price, saving, type } = product;
+const loadUser = async () => {
+  if (localStorage.token) {
+    SetAuthToken(localStorage.token);
+  }
+};
+const ProductItem = (product, props) => {
+  const { id, name, img, price, saving, type } = product.product;
 
-  // funtion getproducts(){
-
-  // }
   function addWishList(item) {
     axios
       .post("http://localhost:5000/api/products", item, {
         headers: {
-          "x-auth-token":
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYxZDY2ZjdhNThhYWEzMGM0MTc3OTA1In0sImlhdCI6MTU5NTc2MjQyMywiZXhwIjoxNTk2MTIyNDIzfQ.2XkJUxMIn8t_t0aD7f2OfqnKoUBGMcFNFm-J-tpPxUE",
+          "x-auth-token": product.token,
         },
       })
       .then((res) => {
-        console.log(res);
+        alert((res = "Your item has been added to your wishlist"));
+        // alert((res = "Your item has been added to your wishlist!"));
       })
       .catch((err) => {
-        console.log(err);
+        alert((err = "Something went wron with your token"));
+        // console.log((err = "Something went wrong.Please write carefully."));
       });
   }
 
   return (
     <div id="shopCards">
-      <Card style={{ width: "18rem" }} id="shopCards">
-        <Card.Img variant="top" src={img} id="shopCards" />
-        <Card.Body>
-          <Card.Title>{name}</Card.Title>
-          <Card.Text>
-            {price}
-            <span>{saving}</span>
-          </Card.Text>
-          <Card.Text></Card.Text>
-          <Button id="shopButton">
-            {" "}
-            <FontAwesomeIcon icon="shopping-bag" />
-          </Button>
+      <div class="card" style={{ width: "30vh" }}>
+        <div className="image-content">
+          <img src={img} alt="Denim Jeans" id="CardImage" />
+        </div>
+        <div className="card-content">
+          <h3 name="name" value={name} id="CardTitle">
+            {name}
+          </h3>
+          <span class="price">
+            <p> {price} </p>
+            save <span>{saving}</span>
+          </span>
 
-          <Button>
-            {" "}
-            <FontAwesomeIcon icon="shopping-cart" />
-          </Button>
-        </Card.Body>
-      </Card>
+          <p>
+            <button onClick={() => addWishList(product.product)}>
+              Wishlist
+            </button>
+            <button>
+              <Link to="./checkout" style={{ color: "black" }}>
+                add to cart
+              </Link>
+            </button>
+            {/* <b id="C*/}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,32 +1,24 @@
 import React from "react";
 import "./Shop.css";
+import Footer from "../layout/Footer";
+import Navbar from "../layout/Navbar";
 import Products from "../products/Products";
-import { Container, Row, Col } from "react-bootstrap";
-
-const Shop = () => {
+import { Row, Col } from "react-bootstrap";
+import Wishlist from "../products/WishList";
+const Shop = (props) => {
   return (
     <div>
+      <Navbar />
       <Row>
-        <Col style={{ backgroundColor: "black" }} id="shopMenu ">
-          1 of 3
+        <Col style={{ backgroundColor: "black" }}>
+          {" "}
+          <Wishlist token={props.location.state.token} />
         </Col>
-        <Col xs={9} style={{ backgroundColor: "grey" }} id="shopCol">
-          <Row>
-            <Col xs={3} style={{ backgroundColor: "grey" }} id="shopMenu ">
-              <Products />
-            </Col>
-            <Col xs={3} style={{ backgroundColor: "grey" }} id="shopCol">
-              <Products />
-            </Col>
-            <Col xs={3} style={{ backgroundColor: "grey" }} id="shopCol">
-              <Products />
-            </Col>
-            <Col xs={3} style={{ backgroundColor: "grey" }} id="shopMenu ">
-              <Products />
-            </Col>
-          </Row>
+        <Col xs={9} style={{ backgroundColor: "grey" }} id="shopMenu">
+          <Products token={props.location.state.token} />
         </Col>
       </Row>
+      <Footer />
     </div>
   );
 };

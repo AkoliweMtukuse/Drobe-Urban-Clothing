@@ -7,8 +7,9 @@
 }
 
 body {
-  background: linear-gradient(to right, white, white);
+  background: linear-gradient(to top, black white, white);
   font-size: 12px;
+  height: d;
 }
 
 body,

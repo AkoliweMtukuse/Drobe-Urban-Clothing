@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Navbar from "../layout/Navbar";
+// s
 import axios from "axios";
 
 const Register = () => {
@@ -20,52 +22,58 @@ const Register = () => {
         },
       })
       .then((res) => {
-        console.log(res);
+        alert((res = "You're Registered"));
       })
       .catch((err) => {
-        console.log(err);
+        alert((err = "Something went wrong"));
       });
   }
 
   return (
-    <div className="form-container">
-      <h1>
-        Account <span className="text-pimary">Register</span>
-      </h1>
-      <form>
-        <div className="form-group">
-          <label htmlFor="name">Fullname:</label>
-          <input type="text" name="name" value={name} onChange={onChange} />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input type="email" name="email" value={email} onChange={onChange} />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={onChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password2">Confirm Password:</label>
-          <input
-            type="password"
-            name="password2"
-            value={password2}
-            onChange={onChange}
-          />
-        </div>
-        <input
-          type="submit"
-          value="Register"
-          className="btn btn-primary btn block"
-          onClick={() => RegisterUser(user)}
-        />
-      </form>
+    <div>
+      <Navbar />
+      <body>
+        <div class="login-box">
+          <h2>Register</h2>
+          <form>
+            <div class="user-box">
+              <input type="text" name="name" value={name} onChange={onChange} />
+              <label>Name</label>
+            </div>
+            <div class="user-box">
+              <input
+                type="text"
+                name="email"
+                value={email}
+                onChange={onChange}
+              />
+              <label>Email</label>
+            </div>
+            <div class="user-box">
+              <input
+                type="password"
+                name="password"
+                value={password}
+                onChange={onChange}
+              />
+              <label>Password</label>
+            </div>
+            <div class="user-box">
+              <input
+                type="password2"
+                name="password2"
+                value={password2}
+                onChange={onChange}
+              />
+              <label>Confirm Password</label>
+            </div>
+            <a href="#" onClick={() => RegisterUser(user)}>
+              Submit
+            </a>
+            <a href="/login">Login</a>
+          </form>
+        </div>{" "}
+      </body>
     </div>
   );
 };

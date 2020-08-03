@@ -1,18 +1,18 @@
 import React, { Fragment, useContext } from "react";
-import ProducttItem from "./ProductItem";
 import ProductContext from "../../context/products/productContext";
+import WishlistItem from "./WishlistItem";
 
-const Products = (props) => {
+export const Wishlist = (props) => {
   const productContext = useContext(ProductContext);
 
   const { products } = productContext;
   return (
     <Fragment>
       {products.map((product) => (
-        <ProducttItem key={product.id} product={product} token={props.token} />
+        <WishlistItem key={product.id} product={product} token={props.token} />
       ))}
     </Fragment>
   );
 };
 
-export default Products;
+export default Wishlist;
